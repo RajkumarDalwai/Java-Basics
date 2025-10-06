@@ -4,25 +4,28 @@ public class PrimeNumber {
 
     public static void main(String[] args) {
 
-        // Goal: Check if the given number is a prime number
+        // A prime number is a number greater than 1
+        // that can be divided only by 1 and itself.
 
-        int val = 30;  // Number to be checked
+        int value = 30;
+        // int value = 29;  // You can test with another number
 
-        boolean flag = false;  // Default assumption: number is prime
+        // Assume number is prime unless proven otherwise
+        boolean isPrime = true;
 
-        // Check for factors from 2 to val/2 (no need to go beyond val/2)
-        for (int i = 2; i < val / 2; i++) {
-
-            if (val % i == 0) {
-                flag = true;  // Found a divisor, so it's not a prime number
-                break;        // No need to check further
+        // Check divisibility from 2 up to value/2
+        for (int i = 2; i < value / 2; i++) {
+            if (value % i == 0) {   // If divisible by any number, not prime
+                isPrime = false;
+                break;  // No need to check further
             }
         }
 
-        // Print result based on the flag
-        if (flag)
-            System.out.println("It is not prime");
-        else
-            System.out.println("It is prime");
+        // Print the result
+        if (isPrime) {
+            System.out.println(value + " : is a prime number");
+        } else {
+            System.out.println(value + " : is not a prime number");
+        }
     }
 }

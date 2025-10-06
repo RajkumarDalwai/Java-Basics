@@ -1,6 +1,6 @@
 package JavaCodingProblems;
 
-public class StringReversePalindrome {
+public class StringReversalPalindrome {
 
     public static void main(String[] args) {
 
